@@ -20,12 +20,12 @@ public class NoticiaControlador {
     @Autowired
     private NoticiaServicio noticiaServicio;
 
-    @GetMapping("/")
-    public String listar(ModelMap modelo) {
-        List<Noticia> noticias = noticiaServicio.listarNoticias();
-        modelo.addAttribute("noticias", noticias);
-        return "noticias.html";
-    }
+//    @GetMapping("/")
+//    public String listar(ModelMap modelo) {
+//        List<Noticia> noticias = noticiaServicio.listarNoticias();
+//        modelo.addAttribute("noticias", noticias);
+//        return "noticias.html";
+//    }
 
     @GetMapping("/registrar") //localhost:8080/notici/registrar
     public String registrar() {
@@ -69,5 +69,13 @@ public class NoticiaControlador {
             modelo.put("error", ex.getMessage());
             return "noticia_modificar.html";
         }
+    }
+    
+    @GetMapping("/lista")
+    public String listar(ModelMap modelo) {
+        List<Noticia> noticias = noticiaServicio.listarNoticias();
+        modelo.addAttribute("noticias", noticias);
+
+        return "noticia_list.html";
     }
 }

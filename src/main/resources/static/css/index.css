@@ -23,7 +23,7 @@
     margin: auto;
 }
 
-.tituloNoticia{
+.tituloNoticias{
     width: 80%;
     text-align: center;
     font-size: 40px;
@@ -47,9 +47,10 @@
     align-items: center;
 }
 
-.tituloNoticias{
+.tituloNoticia{
     font-size: 22px;
     font-weight: 500;
+    
 }
 
 .contenedorMain{
